@@ -1,8 +1,8 @@
 package base;
 
 import data.ProjectProperties;
-import app.view.LoginView;
-import app.view.OnboardingView;
+import app.view.view.LoginView;
+import app.view.view.OnboardingView;
 import org.testng.annotations.BeforeTest;
 
 public class TestLogIn extends TestSetup {

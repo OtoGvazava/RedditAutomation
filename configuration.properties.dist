@@ -1,0 +1,12 @@
+# appium
+appium.server=http://127.0.0.1:4723
+
+# emulator & app
+emulator.id=emulator-5554
+apk.path=C:\\APK\\reddit.apk
+app.package=com.reddit.frontpage
+app.activity=com.reddit.launch.main.MainActivity
+
+# Log in info
+user.username=username
+user.password=password

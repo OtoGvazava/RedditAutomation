@@ -1,4 +1,4 @@
-package app.layout;
+package app.view.layout;
 
 import app.loc.layout.MainLayoutLoc;
 import app.view.View;

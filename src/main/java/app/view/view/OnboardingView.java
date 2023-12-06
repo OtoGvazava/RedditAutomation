@@ -1,10 +1,15 @@
-package app.view;
+package app.view.view;
 
 import app.loc.view.OnboardingViewLoc;
+import app.view.View;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import lombok.Getter;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class OnboardingView extends View<OnboardingView> implements OnboardingViewLoc {
     @Getter
@@ -12,6 +17,8 @@ public class OnboardingView extends View<OnboardingView> implements OnboardingVi
 
     public OnboardingView(AndroidDriver driver) {
         super(driver);
+        new WebDriverWait(driver, Duration.ofSeconds(30))
+                .until(ExpectedConditions.visibilityOfElementLocated(onboardingScreen));
     }
 
     public OnboardingView login(String username) {

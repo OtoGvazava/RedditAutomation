@@ -17,15 +17,15 @@ public class TestSetup {
     public void setUp() {
         UiAutomator2Options options = new UiAutomator2Options()
                 .setUdid(ProjectProperties.EMULATOR_ID)
-                .setApp(ProjectProperties.APK_PATH);
-        driver = new AndroidDriver(
-                new URL(ProjectProperties.APPIUM_URL), options
-        );
-        Thread.sleep(20000);
+                .setApp(ProjectProperties.APK_PATH)
+                .setAppPackage(ProjectProperties.APP_PACKAGE)
+                .setAppActivity(ProjectProperties.APP_ACTIVITY);
+
+        driver = new AndroidDriver(new URL(ProjectProperties.APPIUM_URL), options);
     }
 
-//    @AfterSuite
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterSuite
+    public void tearDown() {
+        driver.quit();
+    }
 }

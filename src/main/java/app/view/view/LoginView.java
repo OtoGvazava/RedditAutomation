@@ -1,6 +1,7 @@
-package app.view;
+package app.view.view;
 
 import app.loc.view.LoginViewLoc;
+import app.view.View;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,7 +12,7 @@ public class LoginView extends View<LoginView> implements LoginViewLoc {
     public LoginView(AndroidDriver driver) {
         super(driver);
         new WebDriverWait(driver, Duration.ofSeconds(5))
-                .until(ExpectedConditions.presenceOfElementLocated(authPager));
+                .until(ExpectedConditions.visibilityOfElementLocated(authPager));
     }
 
     public LoginView inputUsername(String username) {
